@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="CSS/nav.css">
+    <script>
+        /*function toWhite(e) {
+            document.getElementById(e).style.backgroundColor="#fff";
+            document.getElementById(e).style.color="#0055AA";
+        }*/
+        window.onload=function () {
+            var divs=document.querySelectorAll(".all");
+            var shows=document.querySelectorAll(".show");
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].index = i;
+                divs[i].onclick=function(){
+                    for(var n=0;n<shows.length;n++){
+                        shows[n].style.color = "#fff";
+                        shows[n].style.backgroundColor = "#fff";
+                        shows[n].style.display = "none";
+                    }
+                    shows[this.index].style.display="block";
+                }
+
+            }
+
+            var num=0;
+            setInterval(function () {
+
+                if(num==2){
+                    num=0;
+                }
+                    var imgs = document.querySelectorAll(".imgs");
+                    console.log(num);
+                    var btns = document.querySelectorAll(".btns");
+
+                    for (var i = 0; i < btns.length; i++) {
+                        btns[i].style.background = "#000";
+                        imgs[i].style.display = "none";
+                    }
+                    btns[num].style.background = "orange";
+                    imgs[num].style.display = "block";
+
+                num++;
+            },3000)
+
+            /*var show=document.querySelector("#"+n);*/
+
+
+
+        }
+        /*function toShow(ev) {
+            var n="s"+ev;
+            /!*setInterval(function () {*!/
+
+            var divs=document.querySelectorAll(".all");
+            var shows=document.querySelectorAll(".show");
+            var show=document.querySelector("#"+n);
+
+            for (var i = 0; i < shows.length; i++) {
+                divs[i].style.backgroundColor = "#0a54aa";
+                shows[i].style.display = "none";
+            }
+            divs[n].style.backgroundColor = "orange";
+            show.style.display = "block";
+
+            n++;
+            /!*},3000)*!/
+        }*/
+    </script>
+</head>
+<body>
+    <header>
+        <div class="img"><img src="pictures/20190515172834.jpg"></div>
+    </header>
+    <div class="box">
+        <div class="con">
+            <div class="left">
+                <a href="" class="active">首页</a>
+                <a href="">国内机票</a>
+                <a href="">国际机票</a>
+                <a href="">民航资讯</a>
+                <a href="">民航问答</a>
+            </div>
+            <div class="right">
+                <a href="" class="active">登录</a>
+                <a href="">注册</a>
+                <a href="">用户中心<span class="sanjiao"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="hot">
+        <span>热门城市：</span>
+        <a href="">深圳</a>
+        <a href="">北京</a>
+        <a href="">上海</a>
+        <a href="">广州</a>
+        <a href="">南京</a>
+        <a href="">天津</a>
+        <a href="">武汉</a>
+        <a href="">长沙</a>
+        <a href="">昆明</a>
+        <a href="">贵阳</a>
+        <a href="">成都</a>
+        <a href="">重庆</a>
+        <a href="">海口</a>
+        <a href="">哈尔滨</a>
+        <a href="">更多</a>
+    </div>
+    <!--轮播图-->
+    <div class="whole-sheet">
+        <div class="imgs img1"></div>
+        <div class="imgs img2"></div>
+        <div class="btns btn1"></div>
+        <div class="btns btn2"></div>
+    </div>
+    <div class="one">
+        <span class="left" style="font-size: x-large">热门航线预定</span>
+        <span class="right">
+            <a href="" class="all country">全国</a>
+            <a href="" class="all ">深圳</a>
+            <a href="" class="all ">北京</a>
+            <a href="" class="all ">上海</a>
+            <a href="" class="all ">广州</a>
+            <a href="" class="all ">武汉</a>
+            <a href="" class="all ">成都</a>
+            <a href="" class="all ">海口</a>
+            <a href="" class="all ">重庆</a>
+            <a href="" class="all ">沈阳</a>
+        </span>
+    </div>
+    <div class="two">
+        <div class="show" id="s1">
+            <div>
+                <span>海口-->郑州</span>
+                <span>12月16日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>海口-->长沙</span>
+                <span>10月15日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>武汉-->神农架</span>
+                <span>05月18日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>银川-->昆明</span>
+                <span>05月18日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>太原-->昆明</span>
+                <span>11月11日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>南京-->上海浦东</span>
+                <span>07月03日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>西安-->上海浦东</span>
+                <span>01月25日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>合肥-->海口</span>
+                <span>05月28日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>天津-->三亚</span>
+                <span>05月22日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>哈尔滨-->三亚</span>
+                <span>05月15日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+        </div>
+        <div class="show" id="s2">
+            <div>
+                <span>深圳-->昆明</span>
+                <span>10月09日</span>
+                <span>票价<strong class="red">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->武汉</span>
+                <span>10月15日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->兰州</span>
+                <span>10月22日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->海口</span>
+                <span>09月11日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->沈阳</span>
+                <span>06月12日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->上海浦东</span>
+                <span>06月07日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->北京</span>
+                <span>05月27日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->重庆</span>
+                <span>10月11日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->成都</span>
+                <span>10月11日</span>
+                <span>票价</span>
+            </div>
+            <div>
+                <span>深圳-->郑州</span>
+                <span>09月03日</span>
+                <span>票价</span>
+            </div>
+        </div>
+        <div class="show" id="s3">
+            <div>
+                <span>深圳-->昆明</span>
+                <span>10月09日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->武汉</span>
+                <span>10月15日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->兰州</span>
+                <span>10月22日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->海口</span>
+                <span>09月11日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->沈阳</span>
+                <span>06月12日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->上海浦东</span>
+                <span>06月07日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->北京</span>
+                <span>05月27日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->重庆</span>
+                <span>10月11日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->成都</span>
+                <span>10月11日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+            <div>
+                <span>深圳-->郑州</span>
+                <span>09月03日</span>
+                <span>票价<strong class="red large">￥427</strong></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

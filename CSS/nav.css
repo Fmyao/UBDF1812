@@ -1,0 +1,213 @@
+body{
+    padding: 0px;
+    margin: 0px;
+
+}
+header{
+    width: 485px;height: 99px;
+    background-image: url("../pictures/20190515172826.png");
+    background-repeat: no-repeat;
+    background-position: 150px 10px;
+}
+.img{
+    position: relative;
+    left:500px;top:20px;
+}
+.box{
+    padding: 0px 16px;
+    height: 40px;
+    background: #2d7daa;
+}
+.con{
+    /*padding-top:10px;*/
+    height: 100%;
+    /*margin: auto;*/
+}
+.con a{
+    padding: 9px 16px;
+    font-family: "Adobe 黑体 Std R";
+    text-align: center;
+    line-height: 5px;
+    text-decoration: none;
+    color: white;
+
+}
+.con a:hover{
+    background: white;
+    color: #0055AA;
+}
+.left{
+    padding: 10px 0px;
+    width: 690px;
+    height: 100%;
+    float: left;
+}
+.left a:hover{
+    border-top:2px solid orange;
+}
+.left .active{
+    border-top:2px solid orange;
+    background: white;
+    color: #0055AA;
+}
+.box .right{
+    padding: 10px 0px;
+    width: 300px;
+    height: 20px;
+    float: right;
+    background-color: #2b6faa;
+    position: relative;
+    overflow: hidden;
+}
+.box .right a{
+    padding-left: 27px;
+    padding-right:25px ;
+    background: #2b6faa;
+}
+.box .right a:hover{
+    background: #0a54aa;
+    color: white;
+}
+.box .right .active{
+    background-image: url("../pictures/img.png") ;
+    background-repeat: no-repeat;
+    background-position: -310px -501px;
+}
+.box .right .active:hover{
+    background-image: url("../pictures/img.png") ;
+    background-repeat: no-repeat;
+    background-position: -310px -501px;
+    color: white;
+}
+.box .right .sanjiao{
+    width: 0;height: 0;
+    border-top: 10px solid white;
+    border-left: 5px solid #2b6faa ;
+    border-right: 5px solid #2b6faa;
+    position: absolute;left:270px;top:16px;
+}
+.box .right .sanjiao:hover{
+    width: 0;height: 0;
+    border-bottom: 10px solid white;
+    border-left: 5px solid #0a54aa ;
+    border-right: 5px solid #0a54aa;
+    position: absolute;left:270px;top:16px;
+}
+.hot{
+    position: absolute;left: 60px;top:150px;
+    font-size: medium;
+    color: #0055AA;
+}
+.hot span{
+    color: black;
+}
+.hot a{
+    padding: 0px 5px;
+    color: #0055AA;
+    text-decoration: none;
+}
+.whole-sheet{
+    width: 100%;height: 380px;
+    position: relative;
+    left:0px;top:50px;
+}
+.imgs{
+    width: 100%; height: 100%;
+    position: absolute;left: 0px;top: 0px;
+    overflow: hidden;
+}
+.whole-sheet .img1{
+    background: url("../pictures/dingpiao.png") no-repeat;
+    z-index: 1;
+}
+.whole-sheet .img2{
+    background: url("../pictures/saoma.png") no-repeat;
+}
+/*.btns{
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    left: 1300px;top: 360px;
+    z-index: 2;
+}*/
+.btns.btn1{
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    left: 1300px;top: 360px;
+    background-color: orange;
+    z-index: 2;
+}
+.btns.btn2{
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    left: 1380px;top: 360px;
+    background-color: black;
+    z-index: 2;
+}
+.one{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left:0px;top:600px;
+    text-decoration: none;
+}
+.one .left{
+    width: 150px;height: 30px;
+    float: left;
+}
+.one .right{
+    width: 600px;height: 40px;
+    padding: 10px;
+    float: right;
+}
+.one .right a{
+    margin: 0px;padding:12px 8px;
+    text-decoration: none;
+    font-size: medium;
+}
+.one .right a:hover{
+    background-color: white;
+    text-decoration: none;
+    color: #0055AA;
+    border-bottom: 1px solid blue;
+}
+.two{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left:0px;top:650px;
+    border-top: 2px solid grey;
+}
+.show{
+    width: 100%;
+    height: 400px;
+    margin-left:50px ;
+    position: absolute;
+    left:0px;top:0px;
+}
+.two .show div{
+    width:17%;
+    height: 40%;
+    margin: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.62);
+    background-color: #f1f1f1;
+    float: left;
+}
+.two .show div:hover{
+    background-color: white;
+}
+.two .show div span{
+    width: 100%;height: 30%;
+    float: left;
+    color: #0055AA;
+    margin-top: 8px;
+    text-align: center;
+}
+span .red{
+    color: red;
+}
+span .large{
+    font-size:x-large;
+}
