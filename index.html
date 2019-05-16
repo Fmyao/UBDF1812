@@ -16,13 +16,17 @@
                 divs[i].index = i;
                 divs[i].onclick=function(){
                     for(var n=0;n<shows.length;n++){
-                        shows[n].style.color = "#fff";
-                        shows[n].style.backgroundColor = "#fff";
+                        shows[n].style.zIndex = "0";
                         shows[n].style.display = "none";
                     }
+                    shows[this.index].style.zIndex = "3";
                     shows[this.index].style.display="block";
-                }
 
+                    for(var j=0;j<divs.length;j++){
+                        divs[j].style.background="#fff";
+                    }
+                    divs[i].style.background="#49a2f8";
+                }
             }
 
             var num=0;
@@ -50,23 +54,10 @@
 
 
         }
-        /*function toShow(ev) {
-            var n="s"+ev;
-            /!*setInterval(function () {*!/
-
-            var divs=document.querySelectorAll(".all");
-            var shows=document.querySelectorAll(".show");
-            var show=document.querySelector("#"+n);
-
-            for (var i = 0; i < shows.length; i++) {
-                divs[i].style.backgroundColor = "#0a54aa";
-                shows[i].style.display = "none";
-            }
-            divs[n].style.backgroundColor = "orange";
-            show.style.display = "block";
-
-            n++;
-            /!*},3000)*!/
+        /*function toShow(a) {
+           document.getElementById("two").innerHTML='<iframe src="'+a.href+'" width=100% height=100%></iframe>';
+           a.style.backgroundColor="#49a2f8";
+           a.href="#";
         }*/
     </script>
 </head>
@@ -118,9 +109,9 @@
     <div class="one">
         <span class="left" style="font-size: x-large">热门航线预定</span>
         <span class="right">
-            <a href="" class="all country">全国</a>
-            <a href="" class="all ">深圳</a>
-            <a href="" class="all ">北京</a>
+            <a href="#" class="all country active" onclick="toShow(this)">全国</a>
+            <a href="#" class="all " onclick="toShow(this)">深圳</a>
+            <a href="#" class="all " onclick="toShow(this)">北京</a>
             <a href="" class="all ">上海</a>
             <a href="" class="all ">广州</a>
             <a href="" class="all ">武汉</a>
